@@ -75,6 +75,8 @@ if(dateURL != null){
 }
 
 save.addEventListener("click", function(){
+    params.delete("date");
+    params.delete("gender");
     params.append("date", birthday.value);
     params.append("gender", gender.value);
     location.href = url.href;
