@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>人生タイマー</title>
+    <link rel=”icon” href=“/icon.png” type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <p class="start">あなたの人生はあと</p>
+        <div id="gauge">
+            <div id="gaugeUnit0" class="gaugeUnit"></div>
+            <div id="gaugeUnit1" class="gaugeUnit"></div>
+            <div id="gaugeUnit2" class="gaugeUnit"></div>
+            <div id="gaugeUnit3" class="gaugeUnit"></div>
+            <p id="counter0" class="counter">xx日と</p>
+            <p id="counter1" class="counter">xx時間xx分xx秒</p>
+        </div>
+        <p class="end">です。</p>
+        <div class="menubutton" id="open"></div>
+        <div id="menu" class="hide">
+            <div class="setting">
+                <p class="menutitle">設定</p>
+                <div>
+                    <label for="birthday">誕生日</label>
+                    <input type="date" name="birthday" id="birthday" value="1970-01-01">
+                </div>
+                <div>
+                    <label for="gender">性別</label>
+                    <select name="gender" id="gender">
+                        <option value="man">男性</option>
+                        <option value="woman">女性</option>
+                        <option value="genderless" selected>その他</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="save">保存</button>
+                </div>
+            </div>
+            <div class="menubutton" id="close"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

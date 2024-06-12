@@ -1,0 +1,198 @@
+:root{
+    --color0: rgba(0, 0, 0, 0.39);
+    --color1: rgba(0, 255, 0, 0.39);
+    --color2: rgba(255, 192, 0, 0.39);
+    --color3: rgba(255, 0, 0, 0.39);
+}
+
+body{
+    margin: 0;
+    font-family: "Inter", "M PLUS 1p", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+}
+.menubutton{
+    width: 48px;
+    height: 32px;
+    position: relative;
+}
+.menubutton::before{
+    content: '';
+    position: absolute;
+    background-color: #aaa;
+    width: 32px;
+    height: 4px;
+    top: 16px;
+    left: -2px;
+    transform: rotate(45deg);
+}
+.menubutton::after{
+    content: '';
+    position: absolute;
+    background-color: #aaa;
+    width: 32px;
+    height: 4px;
+    top: 16px;
+    right: -2px;
+    transform: rotate(-45deg);
+}
+#open{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+#close::before{
+    transform: rotate(-45deg);
+}
+#close::after{
+    transform: rotate(45deg);
+}
+p{
+    font-size: 32px;
+    margin: 0;
+}
+.gaugeUnit{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+}
+#gaugeUnit0{
+    bottom: 50%;
+    right: 0%;
+    border-top-right-radius: 5vw;
+    --gaugeColor: var(--color0);
+    box-shadow: 0px 0px 36px var(--gaugeColor);
+}
+#gaugeUnit1{
+    bottom: 0%;
+    left: 50%;
+    border-bottom-right-radius: 5vw;
+    --gaugeColor: var(--color0);
+    box-shadow: 0px 0px 36px var(--gaugeColor);
+}
+#gaugeUnit2{
+    top: 50%;
+    left: 0%;
+    border-bottom-left-radius: 5vw;
+    --gaugeColor: var(--color0);
+    box-shadow: 0px 0px 36px var(--gaugeColor);
+}
+#gaugeUnit3{
+    top: 0%;
+    right: 50%;
+    border-top-left-radius: 5vw;
+    --gaugeColor: var(--color0);
+    box-shadow: 0px 0px 36px var(--gaugeColor);
+}
+#gauge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90vw;
+    max-height: 70vh;
+    background-color: #fff;
+    border-radius: 5vw;
+    margin: 5% 10%; 
+    position: relative;
+    z-index: auto;
+}
+.counter{
+    font-size: 5vw;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+#counter0{
+    text-align: start;
+}
+#counter1{
+    text-align: end;
+}
+
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 0px 36px #ddd;
+    box-sizing: border-box;
+    padding: 32px 48px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    transition: top 0.39s ease-out;
+}
+#menu.hide{
+    top: -50vh;
+}
+.setting{
+    width: 100%;
+}
+.menutitle{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 6px 0;
+}
+label{
+    font-size: 32px;
+}
+input{
+    font-size: 30px;
+}
+select{
+    font-size: 30px;
+}
+button{
+    font-size: 30px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #gauge{
+        flex-direction: column;
+        margin: 15% 10%; 
+    }
+    .counter{
+        font-size: 9vw;
+        width: 100%;
+        padding: 0 5vw;
+    }
+    
+    .menutitle{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    label{
+        font-size: 24px;
+    }
+    input{
+        font-size: 23px;
+    }
+    select{
+        font-size: 23px;
+    }
+    button{
+        font-size: 23px;
+    }
+}
