@@ -137,14 +137,14 @@ p{
     border-bottom-right-radius: 32px;
     position: absolute;
     width: 100%;
-    height: 30vh;
+    height: 360px;
     top: 0px;
     left: 0px;
     z-index: 2;
     transition: top 0.39s ease-out;
 }
 #menu.hide{
-    top: -50vh;
+    top: -480px;
 }
 .setting{
     width: 100%;
